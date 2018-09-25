@@ -51,7 +51,7 @@
                     <button id="button-power" class="btn btn-danger operator" value="power"><h1>^</h1></button>
                     <button id="button-equal" class="btn btn-success equal" value="equals"><h1>=</h1></button>
                     <br><br>
-                    <button id="button-clear" class="btn btn-default clear" value="clear"><h1>clear</h1></button>
+                    <button id="button-clear" class="btn btn-default clear" value="clear"><h5>clear and add result to list</h5></button>
                 </div>
 
             </div>
@@ -59,17 +59,38 @@
 
         <!-- Result Panel -->
         <div class="col-lg-6">
-        <div class="panel panel-default">
+
+            <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Result</h3>
+                    <h3 class="panel-title">Calculations</h3>
                 </div>
                 <div class="panel-body">
-                    <!-- <h1 id="first-number"></h1>
-                    <h1 id="operator"></h1>
-                    <h1 id="second-number"></h1>
-                    <hr> -->
-                    <h1 id="result"></h1>
+                    <div class="col-md-2">
+                        <h1 id="first-number"></h1>
+                    </div>
+                    <div class="col-md-2">
+                        <h1 id="operator"></h1>
+                    </div>
+                    <div class="col-md-2">
+                        <h1 id="second-number"></h1>
+                    </div>
+                    <div class="col-md-2">
+                        <h1 id="equals"></h1>
+                    </div>
+                    <div class="col-md-2">
+                        <h1 id="result"></h1>
+                    </div>
+                    <div class="col-md-2"></div>
                 </div>
+            </div>
+
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Results</h3>
+                    </div>
+                    <div class="panel-body">
+                        <h1 id="results"></h1>
+                    </div>
             </div>
         </div>
     </div>

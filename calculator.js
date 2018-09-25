@@ -15,6 +15,7 @@ $(document).ready(function(){
   let operator = "";
   let result = "";
   let resultString = "";
+  const equals = "=";
 //clear function
     const clear = function (){
         firstNumber = "";
@@ -22,9 +23,9 @@ $(document).ready(function(){
         operator = "";
         result = ""; 
         resultString = ""; 
-        // $("#first-number").empty();
-        // $("#operator").empty();
-        // $("#second-number").empty();
+        $("#first-number").empty();
+        $("#operator").empty();
+        $("#second-number").empty();
         $("#result").empty();
     }
     $("#button-clear").click(clear);
@@ -35,10 +36,12 @@ $(".number").click(function () {
         firstNumber += $(this).val();
         console.log(firstNumber);
         resultString = firstNumber;
+        $("#first-number").text(firstNumber);
     } else {
         secondNumber += $(this).val();
         console.log(secondNumber);
         resultString = resultString + " " + secondNumber;
+        $("#second-number").text(secondNumber);
     }
 });
 //operator function
@@ -46,27 +49,34 @@ $(".number").click(function () {
         operator = $(this).text();
         console.log(operator);
         resultString = resultString + " " + operator;
+        $("#operator").text(operator);
     });
 //Calculator
 $("#button-equal").click(function () {
     console.log("operator ", operator)
+    $("#equals").text(equals);
     if (operator === "+"){
         result = parseInt(firstNumber) + parseInt(secondNumber);
         resultString = resultString + " = " + result;
+        $("#result").text(result);
     } else if(operator === "-") {
         result = parseInt(firstNumber) - parseInt(secondNumber);
         resultString = resultString + " = " + result;
+        $("#result").text(result);
     } else if(operator === "*") {
         result = parseInt(firstNumber) * parseInt(secondNumber);
         resultString = resultString + " = " + result;
+        $("#result").text(result);
     } else if(operator === "/"){
         result = parseInt(firstNumber) / parseInt(secondNumber);
         resultString = resultString + " = " + result;
+        $("#result").text(result);
     } else if(operator === "^"){
         result = Math.pow(parseInt(firstNumber), parseInt(secondNumber));
         resultString = resultString + " = " + result;
+        $("#result").text(result);
     };
-    $("#result").text(resultString);
+    $("#results").text(resultString);
 });
  
 });
