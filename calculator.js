@@ -77,7 +77,37 @@ $("#button-equal").click(function () {
         resultString = resultString + " = " + result;
         $("#result").text(result);
     };
-    $("#results").text(resultString);
+    resultsArray.push(resultString);
+
+    $("#results").empty();
+
+    for (var i = 0; i < resultsArray.length; i++) {
+
+        let list = $("<div>");
+        let listItem = $("<p>").text(resultsArray[i]);
+        // Displaying the rating
+        list.append(listItem);
+        $("#results").append(list);
+    };
+
+
+    // var arr = [34, 234, 567, 4];
+    // print(arr);
+    // var new_arr = arr.reverse();
+    // print(new_arr);
+
+
+    // arr.splice(4, 1)
+    // this will remove 1 item at index 4. see here
+
+    // arr.slice(0, 5)
+    // this will return elements in position 0 through 4.
+
+
+
+
+
+
 });
  
 });
