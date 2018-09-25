@@ -26,6 +26,7 @@ $(document).ready(function(){
         $("#first-number").empty();
         $("#operator").empty();
         $("#second-number").empty();
+        $("#equals").empty();
         $("#result").empty();
     }
     $("#button-clear").click(clear);
