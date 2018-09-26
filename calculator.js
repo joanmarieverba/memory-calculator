@@ -1,6 +1,7 @@
 "use strict"
 
 let resultsArray = [];
+let workingLength = 0;
 
 // var fruits = ["Banana", "Orange", "Apple", "Mango"];
 // fruits.push("Kiwi");
@@ -81,33 +82,26 @@ $("#button-equal").click(function () {
 
     $("#results").empty();
 
-    for (var i = 0; i < resultsArray.length; i++) {
+// 10 results maximum
+    if (resultsArray.length < 10 ) {
+        workingLength = resultsArray.length;
+    } else {
+        workingLength = 10;
+    };
 
+    let index = 0;
+    for (let i = 0; i < workingLength; i++) {
+        index = resultsArray.length - 1 - i;
         let list = $("<div>");
-        let listItem = $("<p>").text(resultsArray[i]);
+        let listItem = $("<p>").text(resultsArray[index]);
         // Displaying the rating
         list.append(listItem);
         $("#results").append(list);
     };
 
 
-    // var arr = [34, 234, 567, 4];
-    // print(arr);
-    // var new_arr = arr.reverse();
-    // print(new_arr);
-
-
-    // arr.splice(4, 1)
-    // this will remove 1 item at index 4. see here
-
-    // arr.slice(0, 5)
-    // this will return elements in position 0 through 4.
-
-
-
-
-
-
 });
+
  
 });
+
