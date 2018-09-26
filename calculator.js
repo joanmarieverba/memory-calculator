@@ -3,12 +3,6 @@
 let resultsArray = [];
 let workingLength = 0;
 
-// var fruits = ["Banana", "Orange", "Apple", "Mango"];
-// fruits.push("Kiwi");
-
-// var num = 15;
-// var n = num.toString();
-
 $(document).ready(function(){
 //variables
   let firstNumber = "";
@@ -88,7 +82,7 @@ $("#button-equal").click(function () {
     } else {
         workingLength = 10;
     };
-
+//display last 10 results
     let index = 0;
     for (let i = 0; i < workingLength; i++) {
         index = resultsArray.length - 1 - i;
