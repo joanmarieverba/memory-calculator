@@ -3,18 +3,6 @@ body {
     min-height: 100%;
 }
 
-.centerDiv{
-  margin-left:auto;
-  margin-right:auto;
-}
-
-.text-atomic-tangerine-color {
-  color: #f90;
-}
-
-.text-white-color {
-  color: #fff;
-}
 .text-black-color {
   color: #000;
 }
