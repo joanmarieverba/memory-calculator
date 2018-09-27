@@ -51,27 +51,35 @@ $(".number").click(function () {
 $("#button-equal").click(function () {
     console.log("operator ", operator)
     $("#equals").text(equals);
-    if (operator === "+"){
-        result = parseInt(firstNumber) + parseInt(secondNumber);
-        resultString = resultString + " = " + result;
-        $("#result").text(result);
-    } else if(operator === "-") {
-        result = parseInt(firstNumber) - parseInt(secondNumber);
-        resultString = resultString + " = " + result;
-        $("#result").text(result);
-    } else if(operator === "*") {
-        result = parseInt(firstNumber) * parseInt(secondNumber);
-        resultString = resultString + " = " + result;
-        $("#result").text(result);
-    } else if(operator === "/"){
-        result = parseInt(firstNumber) / parseInt(secondNumber);
-        resultString = resultString + " = " + result;
-        $("#result").text(result);
-    } else if(operator === "^"){
-        result = Math.pow(parseInt(firstNumber), parseInt(secondNumber));
-        resultString = resultString + " = " + result;
-        $("#result").text(result);
+
+    switch (operator) {
+        case "+":
+            result = parseInt(firstNumber) + parseInt(secondNumber);
+            resultString = resultString + " = " + result;
+            $("#result").text(result);
+            break;
+        case "-":
+            result = parseInt(firstNumber) - parseInt(secondNumber);
+            resultString = resultString + " = " + result;
+            $("#result").text(result);
+            break;
+        case "*":
+            result = parseInt(firstNumber) * parseInt(secondNumber);
+            resultString = resultString + " = " + result;
+            $("#result").text(result);
+            break;
+        case "/":
+            result = parseInt(firstNumber) / parseInt(secondNumber);
+            resultString = resultString + " = " + result;
+            $("#result").text(result);
+            break;
+        case "^":
+            result = Math.pow(parseInt(firstNumber), parseInt(secondNumber));
+            resultString = resultString + " = " + result;
+            $("#result").text(result);
+            break;
     };
+
     resultsArray.push(resultString);
 
     $("#results").empty();
